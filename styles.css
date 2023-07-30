@@ -8,6 +8,27 @@ body {
 
 /* ... (previous CSS code) ... */
 
+dark-mode blt {
+  color: #fff; /* Bullet color in dark mode */
+}
+
+blt {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+blt::before {
+  content: "\2022"; /* The bullet character (•) */
+  position: absolute;
+  left: 0;
+}
+
+/* ... (rest of the CSS code) ... */
+
+/* ... (previous CSS code) ... */
+
 .dark-mode {
   background-color: #333;
   color: #fff;
