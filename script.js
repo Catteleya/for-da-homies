@@ -1,3 +1,15 @@
+let paragraphVisibility = [false, false, false];
+
+function toggleParagraph(paraNumber) {
+  const selectedParagraph = document.getElementById(`para${paraNumber}`);
+  paragraphVisibility[paraNumber - 1] = !paragraphVisibility[paraNumber - 1];
+  selectedParagraph.classList.toggle("hidden", !paragraphVisibility[paraNumber - 1]);
+}
+
+
+
+
+
 let darkMode = false;
 
 function showParagraph(paraNumber) {
