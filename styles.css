@@ -41,16 +41,30 @@ h1 {
   display: none;
 }
 
+/* ... (previous CSS code) ... */
+
 .theme-toggle {
   margin-top: 20px;
-  padding: 8px 16px;
-  background-color: #333;
-  color: #fff;
+  padding: 8px;
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .theme-toggle:hover {
-  background-color: #555;
+  transform: scale(1.2);
 }
+
+.icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+  transition: fill 0.3s ease;
+}
+
+.dark-mode .icon {
+  fill: #fff;
+}
+
+/* ... (rest of the CSS code) ... */
