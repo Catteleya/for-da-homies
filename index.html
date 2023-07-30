@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homies Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome, Homies!</h1>
+
+  <button class="homie-btn" onclick="showParagraph(1)">Button 1</button>
+  <button class="homie-btn" onclick="showParagraph(2)">Button 2</button>
+  <button class="homie-btn" onclick="showParagraph(3)">Button 3</button>
+
+  <div id="paragraph-container">
+    <p id="para1" class="hidden">Paragraph 1 content here...</p>
+    <p id="para2" class="hidden">Paragraph 2 content here...</p>
+    <p id="para3" class="hidden">Paragraph 3 content here...</p>
+  </div>
+
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
