@@ -44,9 +44,16 @@ function toggleTheme() {
     applyTheme();
   }
 
+
 function acceptCookies() {
   localStorage.setItem('cookiesAccepted', 'true');
   hideCookiePrompt();
+}
+
+function declineCookies() {
+  localStorage.setItem('cookiesAccepted', 'false');
+  hideCookiePrompt();
+  showCookiesDeclinedPrompt();
 }
 
 function hideCookiePrompt() {
@@ -57,12 +64,18 @@ function hideCookiePrompt() {
 function showCookiePrompt() {
   const cookiesAccepted = localStorage.getItem('cookiesAccepted') === 'true';
   const cookiePrompt = document.getElementById('cookie-prompt');
+  const cookiesDeclinedPrompt = document.getElementById('cookies-declined-prompt');
   if (!cookiesAccepted) {
     cookiePrompt.classList.remove('hidden');
+  } else {
+    cookiesDeclinedPrompt.classList.add('hidden');
   }
 }
 
-
+function showCookiesDeclinedPrompt() {
+  const cookiesDeclinedPrompt = document.getElementById('cookies-declined-prompt');
+  cookiesDeclinedPrompt.classList.remove('hidden');
+}
 
 setDarkModePreference();
 showCookiePrompt();
