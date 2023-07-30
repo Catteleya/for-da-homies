@@ -6,6 +6,9 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+p {
+  text-align: left;
+}
 /* ... (previous CSS code) ... */
 
 dark-mode blt {
