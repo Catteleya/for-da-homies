@@ -31,13 +31,7 @@ let cardVisibility = [false, false, false, false, false];
 function toggleCard(cardNumber) {
   const selectedCard = document.getElementById(`card${cardNumber}`);
   cardVisibility[cardNumber - 1] = !cardVisibility[cardNumber - 1];
-  if (cardVisibility[cardNumber - 1]) {
-    selectedCard.style.opacity = "1";
-    selectedCard.style.transform = "translateY(0)";
-  } else {
-    selectedCard.style.opacity = "0";
-    selectedCard.style.transform = "translateY(100%)";
-  }
+  selectedCard.classList.toggle("hidden", !cardVisibility[paraNumber - 1]);
 }
 
 
