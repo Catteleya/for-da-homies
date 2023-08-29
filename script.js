@@ -43,7 +43,7 @@ function toggleCard(cardNumber) {
 
 function showCard(cardNumber) {
   const cards = document.querySelectorAll("#card-container");
-  paragraphs.forEach(para => para.classList.add("hidden"));
+  cards.forEach(div => div.classList.add("hidden"));
 
   const selectedParagraph = document.getElementById(`card${cardNumber}`);
   selectedParagraph.classList.remove("hidden");
