@@ -24,7 +24,15 @@ function toggleParagraph(paraNumber) {
   selectedParagraph.classList.toggle("hidden", !paragraphVisibility[paraNumber - 1]);
 }
 
+let cardVisibility = [false, false, false, false, false];
 
+// Existing code...
+
+function toggleCard(cardNumber) {
+  const selectedCard = document.getElementById(`card${cardNumber}`);
+  cardVisibility[cardNumber - 1] = !cardVisibility[cardNumber - 1];
+  selectedCard.classList.toggle("hidden", !cardVisibility[cardNumber - 1]);
+}
 
 
 
