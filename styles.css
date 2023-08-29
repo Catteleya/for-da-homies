@@ -129,5 +129,44 @@ h1 {
 .dark-mode .icon {
   fill: #fff;
 }
+/* Existing styles... */
 
-/* ... (rest of the CSS code) ... */
+/* Animation for the card container */
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Styles for the blurred backdrop */
+#blur-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+  pointer-events: none;
+  z-index: 999; /* Ensure the backdrop is above other content */
+}
+
+/* Styles for the card container */
+#card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  animation: slideIn 0.5s ease-out forwards;
+  z-index: 1000; /* Ensure the cards are above the blurred backdrop */
+}
