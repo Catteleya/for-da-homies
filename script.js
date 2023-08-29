@@ -29,6 +29,7 @@ let cardVisibility = [false, false, false, false, false];
 // Existing code...
 
 function toggleCard(cardNumber) {
+  console.log("Function XYZ executed")
   const selectedCard = document.getElementById(`card${cardNumber}`);
   cardVisibility[cardNumber - 1] = !cardVisibility[cardNumber - 1];
   selectedCard.classList.toggle("hidden", !cardVisibility[cardNumber - 1]);
