@@ -154,6 +154,11 @@ h1 {
   z-index: 999; /* Ensure the backdrop is above other content */
 }
 
+.card {
+  /* ... (other card styles) ... */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 #card-container {
   display: flex;
   justify-content: center;
