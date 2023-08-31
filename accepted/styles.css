@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+dark-mode blt {
+  color: #fff; /* Bullet color in dark mode */
+}
+
+blt {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+blt::before {
+  content: "\2022"; /* The bullet character (•) */
+  position: absolute;
+  left: 0;
+}
+
+/* ... (rest of the CSS code) ... */
+
+/* ... (previous CSS code) ... */
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+#blur-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+  z-index: 999;
+}
+
+#card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.card {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.homie-btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.homie-btn:hover {
+  background-color: #0056b3;
+}
